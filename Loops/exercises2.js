@@ -54,9 +54,20 @@ for (var i = 0; i < inputArray.length; i++){
         min = inputArray[i];
     }
 }
-console.log(nextMin); OBAVEZNO ZAVRSITI */
+console.log(nextMin); */
 
-/*Task 5: */
+/*Task 5: Write a program that calculates the sum of positive elements in the array.
+Input array: [3, 11, -5, -3, 2]
+Output: 16 
+
+var array = [3, 11, -5, -3, 2], sum = 0;
+
+for ( var i = 0; i < array.length; i++) {
+    if (arr[i] > 0) {
+        sum += array[i];
+    }    
+}
+console.log(sum)*/
 
 
 /* Task 6:  Write a program that checks if a given array is symmetric. An array is symmetric if it can
@@ -74,7 +85,41 @@ for (var i =0, j = array.length - 1; i<= j; i++, j--){
 } console.log(output) */
 
 
+/* Task 7: Write a program that intertwines two arrays. You can assume the arrays are of the same
+length.
+Input arrays: [4, 5, 6, 2], [3, 8, 11, 9]
+Output array: [4, 3, 5, 8, 6, 11, 2, 9] 
 
+var a = [4, 5, 6, 2], b = [3, 8, 11, 9];
+for (var i = 0, j = 0; i < a.length, j < b.length; i++, j++) {
+    console.log(a[i], b[j]);
+} 
+*/
+
+/* Task 8: Write a program that concatenates two arrays.
+Input arrays: [4, 5, 6, 2], [3, 8, 11, 9]
+Output array: [4, 5, 6, 2, 3, 8, 11, 9]
+
+var a = [4, 5, 6, 2], b = [3, 8, 11, 9], c = [];
+
+for (var i = 0, j = 0; i < a.length - 1, j < b.length - 1; i++, j++) {
+    c = a + "," + b;
+}
+console.log(c) */
+
+/* Task 9: Write a program that deletes a given element e from the array a.
+Input: e = 2, a = [4, 6, 2, 8, 2, 2]
+Output array: [4, 6, 8]
+
+var e = 2, a = [4, 6, 2, 8, 2, 2], result = [];
+
+for (var i = 0; i < a.length; i++) {
+    if (a[i] === e) {
+        delete a[i];
+        result = a;
+    }
+}
+console.log(result) */
 
 
 /* Task 10: Write a program that inserts a given element e on the given position p in the array a. If the value of the position is greater than the array length, print the error message.
