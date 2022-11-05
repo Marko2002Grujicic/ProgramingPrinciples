@@ -12,7 +12,19 @@ for (var i = 0; i < a.length; i++) {
         break;
     }
 } 
-console.log(result);  */
+console.log(result);  
+
+var e1 = 3;
+var a1 = [5, -4.2, 18, 7];
+result1 = "Element e isnt in the array a!!"
+
+for (var i = 0; i < a1.length; i++) {
+    if (a1[i] === e1) {
+        result1 = "Element e is in the array a!"
+        break;
+    }
+} 
+console.log(result1);  */
 
 /* Task 2: Write a program that multiplies every positive element of a given array by 2.
 Input array: [-3, 11, 5, 3.4, -8]
