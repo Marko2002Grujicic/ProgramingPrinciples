@@ -50,7 +50,7 @@ console.log(concatenates("Ha",2));
 function occurrences(inputString, inputLetter){
     var result= 0;
     for (var i=0; i< inputString.length; i++){
-        if (inputLetter === inputString[i]) result++
+        if (inputLetter ===  inputString[i]) result++
     }
     return result
 }
