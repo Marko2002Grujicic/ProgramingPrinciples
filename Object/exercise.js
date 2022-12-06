@@ -80,9 +80,12 @@ function createRecipe (name, type, complex, ingredients, time, instruction){
         changeCuisine : function (newType){
             recipe.typeOfCuisine = newType;
         },
-        deleteIngredient: function (ing){
-             recipe.listOfIngredients.filter
+        deleteIngredient : function (){
+            recipe.filter((ing) => {
+                return recipe.listOfIngredients !== ing;
+            })
         }
+        
     }   
     return recipe;
 }
