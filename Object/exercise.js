@@ -66,11 +66,11 @@ function createRecipe (name, type, complex, ingredients, time, instruction){
         recipeName: name,
         typeOfCuisine: type,
         complexity: complex,
-        listOfIngredients: ingredients,
+        ingredients: ingredients,
         preparingTime: time,
         preparingInstruction: instruction,
         printShopList: function (){
-            console.log(recipe.listOfIngredients);
+            console.log(recipe.ingredients);
         },
         checkTime: function (){
             if(recipe.preparingTime < 15){
@@ -80,15 +80,26 @@ function createRecipe (name, type, complex, ingredients, time, instruction){
         changeCuisine : function (newType){
             recipe.typeOfCuisine = newType;
         },
-        deleteIngredient : function (){
-            recipe.filter((ing) => {
-                return recipe.listOfIngredients !== ing;
-            })
+        deleteIngredient : function (ingredient){
+            var updatedIngredients = [];
+            for (var i = 0; i < recipe.ingredients.length; i++){
+                if (recipe.ingredients[i] !== ingredient){
+                    updatedIngredients[updatedIngredients.length] = recipe.ingredients[i];
+                }
+            }
+            recipe.ingredients = updatedIngredients;
+            
         }
         
     }   
     return recipe;
 }
+var p = createRecipe (
+    "Paprikas", "Madjarska kuhinja", "3", ["paprike", "crni luk", "biber"], 10, "Sipati vodu u lonac..."
+);
+console.log(p);
+p.deleteIngredient("biber");
+console.log(p);
 
 
 
