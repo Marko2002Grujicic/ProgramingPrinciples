@@ -4,7 +4,6 @@
   function Person(name, surname) {
     this.name = name;
     this.surname = surname;
-
     this.getData = function () {
       return this.name + " " + this.surname;
     };
@@ -13,7 +12,6 @@
   function Seat(number, category) {
     this.number = number || Math.floor(Math.random() * (100 - 10 + 1)) + 10;
     this.category = category || "e";
-
     this.getData = function () {
       return this.number + " " + this.category;
     };
